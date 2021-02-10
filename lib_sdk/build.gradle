@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig{
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    api rootProject.depsJetpackLibs.appcompat
+    api rootProject.depsJetpackLibs.material
+
+    api rootProject.depsOtherLibs.okhttp
+    api rootProject.depsOtherLibs.loggingInterceptor
+
+    api rootProject.depsOtherLibs.retrofit2
+    api rootProject.depsOtherLibs.retorfit2_converter_gson
+    api rootProject.depsOtherLibs.retorfit2_adapter_rxjava3
+
+    api rootProject.depsJetpackLibs.coroutines
+
+    api rootProject.depsOtherLibs.koin
+    api rootProject.depsOtherLibs.coreExt
+    api rootProject.depsOtherLibs.koinScope
+    api rootProject.depsOtherLibs.koinViewModel
+    api rootProject.depsOtherLibs.koinFragment
+
+    api rootProject.depsOtherLibs.aRoutre
+
+    api rootProject.depsJetpackLibs.constraintlayout
+
+    api rootProject.depsJetpackLibs.livedata
+    api rootProject.depsJetpackLibs.viewmodel
+
+    api rootProject.depsJetpackLibs.multidex
+
+    api rootProject.depsOtherLibs.FlycoTabLayout_Lib
+}

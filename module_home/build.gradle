@@ -1,0 +1,17 @@
+apply from:"../android_gradle.gradle"
+
+android {
+    resourcePrefix "home_"
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+    implementation project(":lib_base")
+    implementation project(":lib_widget")
+    implementation project(":lib_service")
+
+}

@@ -1,0 +1,17 @@
+include ':module_flutter'
+include ':lib_sdk'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  'flutter_module/.android/include_flutter.groovy'
+))
+include ':lib_service'
+include ':lib_widget'
+include ':module_news'
+include ':module_user'
+include ':module_home'
+include ':lib_base'
+include ':app'
+rootProject.name = "AppModule"
+
+include ':flutter_module'

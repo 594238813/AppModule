@@ -1,0 +1,15 @@
+apply from:"../android_gradle.gradle"
+
+android {
+
+
+}
+
+dependencies {
+    implementation project(path: ':flutter')
+    implementation project(":lib_base")
+    implementation project(":lib_service")
+
+    implementation "com.alibaba:arouter-api:1.5.1"
+    kapt rootProject.depsOtherLibs.aRoutre_kapt
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.module_news">
+
+    <!-- 这里只要用包含Activity就好 -->
+    <application>
+        <activity android:name=".ui.NewsActivity"/>
+
+    </application>
+
+</manifest>

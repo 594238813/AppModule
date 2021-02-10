@@ -1,0 +1,16 @@
+apply from:"../android_gradle.gradle"
+
+android {
+
+    resourcePrefix "widget_"
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+
+dependencies {
+
+    api project(":lib_sdk")
+}
